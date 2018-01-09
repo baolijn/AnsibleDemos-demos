@@ -1,0 +1,7 @@
+---
+- hosts: webservers
+  vars: 
+       key: Ansible
+  tasks:
+  - name: display Host
+    debug: msg="The {{ inventory_hostname }} is {{ key }}"  
