@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks:
+   - name: register variable
+     shell: hostname
+     register: info
+   - name: dispaly variable
+     debug: msg="The variable is {{ info['stdout'] }}"
