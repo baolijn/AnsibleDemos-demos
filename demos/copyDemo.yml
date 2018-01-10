@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks: 
+   - name: copy files
+     copy: src=. dest=/app mode=600
+
