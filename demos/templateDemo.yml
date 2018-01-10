@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+   - name: config
+     template: src=test.conf dest=/etc/aaa.conf
