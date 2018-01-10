@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+   - name: debug nested loops
+     debug: msg="name  -------->  {{ item[0] }} value    ----------> {{ item[1]}}"
+     with_nested:
+      - ['A']
+      - [‘a’,'b', 'c']
